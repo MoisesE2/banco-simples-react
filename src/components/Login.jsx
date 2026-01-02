@@ -87,7 +87,6 @@ const Login = () => {
         </button>
         <div className="login-hint">
           <p>Informe o ID da conta (número) ou CPF para acessar</p>
-          <p className="hint-small">Certifique-se de que a API está rodando em http://localhost:8081</p>
         </div>
       </div>
 
