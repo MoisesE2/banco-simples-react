@@ -15,11 +15,19 @@ COPY . .
 # Build the application
 RUN npm run build
 
+# Verify build output
+RUN ls -la /app/dist && \
+    test -f /app/dist/index.html || (echo "ERROR: index.html not found!" && exit 1)
+
 # Production stage
 FROM nginx:alpine
 
 # Copy built files from builder
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Verify files were copied
+RUN ls -la /usr/share/nginx/html && \
+    test -f /usr/share/nginx/html/index.html || (echo "ERROR: index.html not found in nginx!" && exit 1)
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
