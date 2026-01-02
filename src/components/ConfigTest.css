@@ -1,0 +1,69 @@
+.config-test {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.config-test h3 {
+  color: #1f2937;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.25px;
+}
+
+.config-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.config-label {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.config-value {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  text-align: right;
+}
+
+.config-value.development {
+  color: #059669;
+}
+
+.config-value.production {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .config-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .config-value {
+    text-align: left;
+    width: 100%;
+  }
+}
+

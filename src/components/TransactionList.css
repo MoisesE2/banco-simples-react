@@ -1,0 +1,128 @@
+.transaction-list-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction-header h2 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}
+
+.transaction-count {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.empty-transactions {
+  text-align: center;
+  padding: 60px 40px;
+  color: #9ca3af;
+}
+
+.empty-transactions p {
+  font-size: 0.9375rem;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.transaction-item:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.transaction-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.transaction-description {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.9375rem;
+}
+
+.transaction-type-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transaction-date {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.transaction-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: -0.25px;
+}
+
+@media (max-width: 768px) {
+  .transaction-item {
+    flex-wrap: wrap;
+  }
+
+  .transaction-amount {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+

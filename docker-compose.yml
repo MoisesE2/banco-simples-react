@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  banco-simples-react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: banco-simples-react
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - banco-network
+
+networks:
+  banco-network:
+    driver: bridge
+
