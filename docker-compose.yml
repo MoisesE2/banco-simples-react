@@ -11,8 +11,19 @@ services:
       - "3000:80"
     environment:
       - NODE_ENV=production
+    volumes:
+      - nginx-logs:/var/log/nginx
     networks:
       - banco-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  nginx-logs:
 
 networks:
   banco-network:
